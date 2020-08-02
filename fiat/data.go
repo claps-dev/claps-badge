@@ -45,7 +45,7 @@ func data(){
 	for _, cur := range s.Data {
 		data[cur.Code] = cur.Rate
 	}
-	db,err:= gorm.Open("mysql", "root:12345678@tcp(127.0.0.1:3308)/database")
+	db,err:= gorm.Open("mysql", "root:12345678@tcp(127.0.0.1:3308)/database")//MySQL地址端口和密码
 	if err != nil {
 		log.Fatal(err)
 	}
