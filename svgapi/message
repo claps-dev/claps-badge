@@ -15,13 +15,15 @@ type Fiat struct {
 	Rate float64 `gorm:"type:decimal;column:rate"`
 }
 
-type Items struct {
+type Data struct {
 	Name    string
 	Id       float64
 	Total    float64
 }
 type Employee struct {
-	Items    []Items
+	Code    float64
+	Data    []Data
+	Message string
 }
 func message() map[string][2] string {
 	message := make(map[string][2] string)
