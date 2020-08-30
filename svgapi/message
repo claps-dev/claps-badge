@@ -38,7 +38,7 @@ func message() map[string][2] string {
 	body, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	json.Unmarshal([]byte(body), &s)
-	for _, cur := range s.Items {
+	for _, cur := range s.Data {
 		about[0]=cur.Name//项目名
 		about[1]=strconv.FormatFloat(cur.Total,'f',-1,64)//项目总捐赠额
 		message[strconv.FormatFloat(cur.Id,'f',-1,64)] = about
