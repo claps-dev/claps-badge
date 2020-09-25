@@ -110,11 +110,26 @@ export default Vue.extend({
   data: () => ({
       pname: 'claps',
       tmoney: 'USD',
-      code: '<img src=”//badge.claps.dev/11912.svg” />'
+      code: '<img src=”//badge.claps.dev/11912.svg” />',
+      id: '',
+      do:[]
     }
   ),
   mounted () {
-    console.log(this.$route.id)
+    this.id = this.$route.query.id
+    fetch("http://121.89.171.193:4507/api/projects/").then(response => response.json())
+      .then(data => {for(let b=0;b<data.data.length;b++){this.do[b]=data.data[b]}})
+      .catch(err => console.log("Oh, error", err))
+    console.log(this.do)
+    for (let j = 0;j < this.do.length;j++)
+      console.log(this.do)
+      if (this.do[j].id == this.id){
+        console.log(this.do[j].name)
+        console.log(this.do[j])
+      }
+        window.console.log(this.do[j])
+        console.log(this.id)
+    }
   },
   methods: {
     svg0: function () {
@@ -229,7 +244,7 @@ export default Vue.extend({
       j.style.color = '#1EA0FF'
       ja.style.background = '#1EA0FF'
       j.style.fontWeight = 'bold'
-      this.code = ''
+      this.code = this.id
     },
     copy () {
       const yy = document.getElementById('yy')
@@ -251,8 +266,8 @@ export default Vue.extend({
       const title = document.getElementById('title')
       title.style.display = 'inline'
       title.innerHTML = 'OUTPUT BADGE'
-      const view = document.getElementById('view')
-      view.style.bottom = '31%'
+      const views = document.getElementById('view')
+      views.style.bottom = '31%'
     }
   }
 })
