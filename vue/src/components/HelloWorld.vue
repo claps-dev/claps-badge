@@ -8,7 +8,6 @@
     <p style="position: absolute;width: 54px;height: 20px;left: 161px;top: 133px;font-family: PingFang HK;font-style: normal;font-weight: normal;font-size: 14px;line-height: 20px;display: flex;align-items: flex-end;color: #000000;opacity: 0.4;">/ Badge</p>
     <div id="view" style="border-style:solid;border-width:1px;border-color:#FFFFFF;position: absolute;left: 4.8%;right: 4.8%;top: 20.8%;bottom: 14%;background: #FFFFFF;box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.08);border-radius: 20px;">
     </div>
-    <!--
     <div class="dead" v-on:click="svg0" style="cursor:pointer;position: absolute;top:22.54%;left:10.67%;right:6%;bottom: 52%"></div>
     <div class="dead" v-on:click="svg0" style="cursor:pointer;position: absolute;width: 240px;height: 40px;left: 10.67%;top: 32%;background: #00A3FF;border-radius: 20px;">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 110px;height: 40px;float:left">
@@ -36,7 +35,6 @@
     <p class="dead" v-on:click="svg1" style="cursor:pointer;position: absolute;left:88%;top:65%;color: #C4C4C4">&gt;</p>
     <p class="dead" v-on:click="svg1" style="cursor:pointer;position: absolute;left: 11.47%;right: 27.31%;top: 75.29%;font-family: SF UI Display;font-style: normal;font-weight: normal;font-size: 16px;line-height: 19px;display: flex;align-items: flex-end;color: #000000;">Full Badge</p>
     <p class="dead" v-on:click="svg1" style="cursor:pointer;position: absolute;left: 11.47%;right: 18.93%;top: 78.25%;font-family: SF UI Display;font-style: normal;font-weight: normal;font-size: 12px;line-height: 14px;color: #6F767C;">A badge include project name, donate button and donation summary.</p>
-    -->
     <!--svg0的参数界面-->
     <div hidden="true" class="tdead" style="position: absolute;left: 10.67%;right: 10.67%;top: 26.11%;bottom: 56.03%;border: 1px solid #CCCCCC;box-sizing: border-box;border-radius: 10px;">
       <div id="background-color" style="position: absolute;width: 240px;height: 40px;left: 10.67%;top: 32%;background: #00A3FF;border-radius: 20px;">
@@ -84,20 +82,18 @@
       <p style="position: absolute;left: 0%;right: 0%;top: 25%;bottom: 25%;font-family: SF UI Display;font-style: normal;font-weight: bold;font-size: 16px;line-height: 22px;text-align: center;color: #FFFFFF;">Generate Code</p>
     </div>
     <!--最终界面-->
-    <p id="svg" v-on:click="svg" style="cursor:pointer;position: absolute;left: 10.67%;top: 27.3%;font-family: SF UI Display;font-style: normal;font-weight: bold;font-size: 14px;line-height: 17px;color: #1EA0FF;">SVG</p>
-    <div id="svg-" style="position: absolute;width:24px;left: 11.1%;top: 30%;bottom: 69.3%;background: #1EA0FF;border-radius: 2px;"></div>
-    <p id="png" v-on:click="png" style="cursor:pointer;position: absolute;left: 45.5%;top: 27.3%;font-family: SF UI Display;font-style: normal;font-weight: normal;font-size: 14px;line-height: 17px;color: #6F767C;">PNG</p>
-    <div id="png-" style="position: absolute;left: 46.1%;width:24px;top: 30%;bottom: 69.3%;background: white;border-radius: 2px;"></div>
-    <p id="js" v-on:click="js" style="cursor:pointer;position: absolute;left: 74%;top: 27.3%;font-family: SF UI Display;font-style: normal;font-weight: normal;font-size: 14px;line-height: 17px;color: #6F767C;">Javascript</p>
-    <div id="js-" style="position: absolute;left: 80%;width:24px;top: 30%;bottom: 69.3%;background: white;border-radius: 2px;"></div>
-    <div style="position: absolute;left: 10.67%;right: 10.67%;top: 33.25%;bottom: 50.49%;background: #333333;border-radius: 10px;">
+    <p hidden="true" class="end" id="svg" v-on:click="svg" style="cursor:pointer;position: absolute;left: 30.67%;top: 27.3%;font-family: SF UI Display;font-style: normal;font-weight: bold;font-size: 14px;line-height: 17px;color: #1EA0FF;">SVG</p>
+    <div hidden="true" class="end" id="svg-" style="position: absolute;width:24px;left: 31.3%;top: 30%;bottom: 69.3%;background: #1EA0FF;border-radius: 2px;"></div>
+    <p hidden="true" class="end" id="js" v-on:click="js" style="cursor:pointer;position: absolute;left: 57%;top: 27.3%;font-family: SF UI Display;font-style: normal;font-weight: normal;font-size: 14px;line-height: 17px;color: #6F767C;">Javascript</p>
+    <div hidden="true" class="end" id="js-" style="position: absolute;left: 62%;width:24px;top: 30%;bottom: 69.3%;background: white;border-radius: 2px;"></div>
+    <div hidden="true" class="end" style="position: absolute;left: 10.67%;right: 10.67%;top: 33.25%;bottom: 50.49%;background: #333333;border-radius: 10px;">
     </div>
-    <p style="position: absolute;left: 14.93%;top: 35.22%;bottom: 61.33%;font-family: Menlo;font-style: normal;font-weight: normal;font-size: 12px;line-height: 14px;color: #FFFFFF;">{{code}}</p>
-    <div v-on:click="copy" style="cursor:pointer;position: absolute;left: 10.67%;right: 10.67%;top: 52.96%;bottom: 41.63%;background: #00A3FF;border-radius: 22px;">
+    <p hidden="true" class="end" style="white-space: pre-wrap;position: absolute;left: 14.93%;right:11.2%;top: 35.22%;bottom: 61.33%;font-family: Menlo;font-style: normal;font-weight: normal;font-size: 12px;line-height: 14px;color: #FFFFFF;">{{code}}</p>
+    <div hidden="true" class="end" v-on:click="copy" style="cursor:pointer;position: absolute;left: 10.67%;right: 10.67%;top: 52.96%;bottom: 41.63%;background: #00A3FF;border-radius: 22px;">
       <p style="position: absolute;left: 0%;right: 0%;top: 25%;bottom: 25%;font-family: SF UI Display;font-style: normal;font-weight: bold;font-size: 16px;line-height: 22px;text-align: center;color: #FFFFFF;">Copy Code</p>
     </div>
-    <p style="position: absolute;left: 10.67%;right: 11.47%;top: 60.59%;bottom: 35.22%;font-family: PingFang HK;font-style: normal;font-weight: normal;font-size: 12px;line-height: 17px;color: #6F767C;">Embed the code into your blog, website, or github README.md</p>
-    <input id="yy" value="." style="display: none">
+    <p hidden="true" class="end" style="position: absolute;left: 10.67%;right: 11.47%;top: 60.59%;bottom: 35.22%;font-family: PingFang HK;font-style: normal;font-weight: normal;font-size: 12px;line-height: 17px;color: #6F767C;">Embed the code into your blog, website, or github README.md</p>
+    <input hidden="true" class="end" id="yy" value="." style="display: none">
   </div>
 </template>
 
@@ -112,24 +108,16 @@ export default Vue.extend({
       tmoney: 'USD',
       code: '<img src=”//badge.claps.dev/11912.svg” />',
       id: '',
-      do:[]
+      size: '0',
+      bgcolors: 'blue',
+      color_: 'white'
     }
   ),
   mounted () {
     this.id = this.$route.query.id
     fetch("http://121.89.171.193:4507/api/projects/").then(response => response.json())
-      .then(data => {for(let b=0;b<data.data.length;b++){this.do[b]=data.data[b]}})
+      .then(data => {for(let b=0;b<data.data.length;b++){if(data.data[b].id==this.id){this.pname=data.data[b].name}}})
       .catch(err => console.log("Oh, error", err))
-    console.log(this.do)
-    for (let j = 0;j < this.do.length;j++)
-      console.log(this.do)
-      if (this.do[j].id == this.id){
-        console.log(this.do[j].name)
-        console.log(this.do[j])
-      }
-        window.console.log(this.do[j])
-        console.log(this.id)
-    }
   },
   methods: {
     svg0: function () {
@@ -144,6 +132,7 @@ export default Vue.extend({
       for (let jb = 0; jb < ab.length; jb++) {
         ab[jb].removeAttribute('hidden')
       }
+      this.size = '0'
     },
     svg1: function () {
       const a = document.getElementsByClassName('dead')
@@ -159,11 +148,13 @@ export default Vue.extend({
       for (let jb = 0; jb < ab.length; jb++) {
         ab[jb].removeAttribute('hidden')
       }
+      this.size = '1'
     },
     fcolor () {
       const finput = document.getElementById('fcolor')
       const fbackcolor = document.getElementById('background-color')
       fbackcolor.style.background = finput.value
+      this.bgcolors = finput.value
     },
     scolor () {
       const sinput = document.getElementById('scolor')
@@ -171,6 +162,7 @@ export default Vue.extend({
       labcolor[1].style.fill = sinput.value
       labcolor[0].style.fill = sinput.value
       labcolor[2].style.color = sinput.value
+      this.color_ = sinput.value
     },
     fcolor1 () {
       const finput1 = document.getElementById('bcolor')
@@ -180,6 +172,7 @@ export default Vue.extend({
       bcolor1.style.color = finput1.value
       bcolor2.style.color = finput1.value
       bcolor3.style.fill = finput1.value
+      this.bgcolors = finput1.value
     },
     scolor1 () {
       const sinput1 = document.getElementById('color')
@@ -187,6 +180,7 @@ export default Vue.extend({
       const color2 = document.getElementById('c2')
       color1.style.fill = sinput1.value
       color2.style.fill = sinput1.value
+      this.color_ = sinput1.value
     },
     ckind () {
       const money = document.getElementById('money')
@@ -195,56 +189,29 @@ export default Vue.extend({
     svg () {
       const s = document.getElementById('svg')
       const sa = document.getElementById('svg-')
-      const p = document.getElementById('png')
-      const pa = document.getElementById('png-')
       const j = document.getElementById('js')
       const ja = document.getElementById('js-')
       s.style.color = '#1EA0FF'
       sa.style.background = '#1EA0FF'
       s.style.fontWeight = 'bold'
-      p.style.color = '#6F767C'
-      pa.style.background = 'white'
-      p.style.fontWeight = 'normal'
       j.style.color = '#6F767C'
       ja.style.background = 'white'
       j.style.fontWeight = 'normal'
-      this.code = ''
-    },
-    png () {
-      const s = document.getElementById('svg')
-      const sa = document.getElementById('svg-')
-      const p = document.getElementById('png')
-      const pa = document.getElementById('png-')
-      const j = document.getElementById('js')
-      const ja = document.getElementById('js-')
-      s.style.color = '#6F767C'
-      sa.style.background = 'white'
-      s.style.fontWeight = 'normal'
-      p.style.color = '#1EA0FF'
-      pa.style.background = '#1EA0FF'
-      p.style.fontWeight = 'bold'
-      j.style.color = '#6F767C'
-      ja.style.background = 'white'
-      j.style.fontWeight = 'normal'
-      this.code = '<img src=”//badge.claps.dev/11912.png” />'
+      this.code = '<img src=”http://127.0.0.1:8081/all/'+this.id+'.svg” />'
     },
     js () {
       const s = document.getElementById('svg')
       const sa = document.getElementById('svg-')
-      const p = document.getElementById('png')
-      const pa = document.getElementById('png-')
       const j = document.getElementById('js')
       const ja = document.getElementById('js-')
       s.style.color = '#6F767C'
       sa.style.background = 'white'
       s.style.fontWeight = 'normal'
-      p.style.color = '#6F767C'
-      pa.style.background = 'white'
-      p.style.fontWeight = 'normal'
       j.style.color = '#1EA0FF'
       ja.style.background = '#1EA0FF'
       j.style.fontWeight = 'bold'
-      this.code = this.id
+      const ab = this.id+'|'+this.tmoney+'|'+this.size+'|'+this.bgcolors+'|'+this.color_
+      this.code = '<div class=\"claps-donate-button\"\n' + '     data-button-id=' +ab+'\n></div>\n' + '<script src=\"http://127.0.0.1:8081/all/a.js\" async>'+'<'+'/script>'
     },
     copy () {
       const yy = document.getElementById('yy')
@@ -266,8 +233,19 @@ export default Vue.extend({
       const title = document.getElementById('title')
       title.style.display = 'inline'
       title.innerHTML = 'OUTPUT BADGE'
-      const views = document.getElementById('view')
-      views.style.bottom = '31%'
+      const view = document.getElementById('view')
+      view.style.bottom = '31%'
+      const cc = document.getElementsByClassName('end')
+      for (let jb = 0; jb < cc.length; jb++) {
+        cc[jb].removeAttribute('hidden')
+      }
+      this.code = '<img src=”http://127.0.0.1:8081/all/'+this.id+'.svg” />'
+      const abcd = 'project='+this.id+"&money="+this.tmoney+"&size="+this.size+"&bgcolor="+this.bgcolors+"&color="+this.color_
+      const abc = abcd.replace(/#/g, "%23")
+      const url = 'http://127.0.0.1:8081/?'+abc
+      fetch(url).then(response => response.text())
+        .then(data => {console.log(data)})
+        .catch(err => console.log("Oh, error", err))
     }
   }
 })
